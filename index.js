@@ -17,7 +17,7 @@ app.get("/employees", async (req, res) => {
 });
 
 app.get("/employees/details/:id", async (req, res) => {
-  let employee = getEmployeeById(parseInt(req.body.id));
+  let employee = getEmployeeById(parseInt(req.params.id));
   res.json({ employee });
 });
 
